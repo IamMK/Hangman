@@ -5,9 +5,7 @@
 </template>
 
 <script>
-import Header from "./components/Header"
-import Word from "./components/Word"
-import Footer from "./components/Footer"
+import Word from './components/Word'
 
 export default {
   name: 'app',
