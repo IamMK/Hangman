@@ -1,16 +1,18 @@
 <template>
   <div class="hangman">
-    <Word></Word>
+    <Keyboard />
+    <Word />
   </div>
 </template>
 
 <script>
 import Word from './components/Word'
+import Keyboard from './components/Keyboard'
 
 export default {
   name: 'app',
   components:{
-    Word
+    Word, Keyboard
   },
   data () {
     return {

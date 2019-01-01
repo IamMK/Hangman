@@ -1,6 +1,6 @@
 <template>
-    <div class="main__display__word">
-        <div class="main__display__word__letter"
+    <div class="main__word">
+        <div class="main__word__letter"
             v-for="item in word" :key="item.id">
         {{item}}
         </div>

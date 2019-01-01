@@ -1,1 +1,1 @@
-.main__display__word{display:flex}.main__display__word__letter{width:50px;height:50px;border-bottom:2px solid black;margin:5px;cursor:pointer;display:flex;justify-content:center;align-items:center}
+.main__word{display:flex}.main__word__letter{width:50px;height:50px;border-bottom:2px solid black;margin:5px;cursor:pointer;display:flex;justify-content:center;align-items:center}.main__keyboard{display:flex}.main__keyboard__letter{width:25px;height:25px;border:1px solid black;cursor:pointer;display:flex;justify-content:center;align-items:center}
