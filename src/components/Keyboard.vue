@@ -1,7 +1,8 @@
 <template>
     <div class="main__keyboard">
         <div class="main__keyboard__letter"
-            v-for="item in ascii" :key="item">
+            v-for="item in ascii" :key="item"
+            @click="lookForLetter">
             {{item}}
         </div>
     </div>
@@ -13,12 +14,17 @@ export default {
     computed:{
         ascii: {
             get: function(){
-                var char = new Array();
+                var char = [];
                 for(let i = 0; i <= 25; i++){
                     char[i] = String.fromCharCode(i+65);
                 }
                 return char;
             }
+        }
+    },
+    methods: {
+        lookForLetter: (event) => {
+            // Use Vuex here
         }
     }
 }
