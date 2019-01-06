@@ -20,11 +20,23 @@ export default {
                 }
                 return char;
             }
-        }
+        },
     },
     methods: {
-        lookForLetter: (event) => {
+        lookForLetter: function(event){
             // Use Vuex here
+            // event.target.innerText
+            // console.log(this.$store.getters.ask)
+            for(let value of this.$store.state.word){
+                if( value == event.target.innerText ){
+                    this.$store.getters.ask[
+                        this.$store.state.word.indexOf(value)
+                    ] = value;
+                    console.log(this.$store.state.word)
+                    console.log(value)
+                    console.log(this.$store.getters.ask)
+                }
+            }
         }
     }
 }

@@ -1,7 +1,6 @@
 .main{
     &__word{
         display: flex;
-       
         &__letter{
             @include flex;
             @include letter;
