@@ -3,3 +3,7 @@ export const goodLetter = (state, id) => {
             if(item.id == id) item.visible = true;
         }
 }
+
+export const badTry = state => {
+    state.tries--;
+}

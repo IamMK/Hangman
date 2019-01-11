@@ -25,11 +25,14 @@ export default {
     },
     methods: {
         lookForLetter: function(event){
+            var letterFound = false;
             for(let item of this.$store.state.word){
                 if( item.value == event.target.innerText ){
                     this.$store.commit('goodLetter', item.id)
+                    letterFound = true;
                 }
             }
+            if(!letterFound)    this.$store.commit('badTry')
         }
     }
 }
