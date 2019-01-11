@@ -10,8 +10,6 @@
 </template>
 
 <script>
-// HOT RELOAD TO ADD
-
 export default {
     name: "Keyboard",
     computed:{
@@ -27,16 +25,9 @@ export default {
     },
     methods: {
         lookForLetter: function(event){
-            // Use Vuex here
-            // event.target.innerText
-            // console.log(this.$store.getters.ask)
-            for(let value of this.$store.state.word.toUpperCase()){
-                if( value == event.target.innerText ){
-                    this.$store.getters.ask[
-                        this.$store.state.word.toUpperCase().indexOf(value)
-                    ] = value
-                    console.log(this.$store.state.word)
-                    console.log(this.$store.getters.ask)
+            for(let item of this.$store.state.word){
+                if( item.value == event.target.innerText ){
+                    this.$store.commit('goodLetter', item.id)
                 }
             }
         }

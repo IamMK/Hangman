@@ -19,9 +19,6 @@ export default {
     computed: {
         ask(){
             return this.$store.getters.ask
-            },
-            word(){
-                return this.$store.state.word
             }
     },
     methods: {

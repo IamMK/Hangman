@@ -1,3 +1,21 @@
 export default {
-    word: "Hangman the game",
+    word: [
+        {id: 0, value: 'H', visible: false},
+        {id: 1, value: 'A', visible: false},
+        {id: 2, value: 'N', visible: false},
+        {id: 3, value: 'G', visible: false},
+        {id: 4, value: 'M', visible: false},
+        {id: 5, value: 'A', visible: false},
+        {id: 6, value: 'N', visible: false},
+        {id: 7, value: ' ', visible: false},
+        {id: 8, value: 'T', visible: false},
+        {id: 9, value: 'H', visible: false},
+        {id: 10, value: 'E', visible: false},
+        {id: 11, value: ' ', visible: false},
+        {id: 12, value: 'G', visible: false},
+        {id: 13, value: 'A', visible: false},
+        {id: 14, value: 'M', visible: false},
+        {id: 15, value: 'E', visible: false},
+    ],
+    tries: 3,
 }
