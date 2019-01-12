@@ -11,7 +11,7 @@
     "scss": "cross-env NODE_ENV=production node-sass -w scss -o css --output-style compressed"
   },
   "dependencies": {
-    "vue": "^2.5.11",
+    "vue": "^2.5.22",
     "vuex": "^3.0.1"
   },
   "browserslist": [
@@ -27,7 +27,7 @@
     "cross-env": "^5.0.5",
     "file-loader": "^1.1.4",
     "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
+    "vue-template-compiler": "^2.5.22",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   }
