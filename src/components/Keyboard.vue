@@ -5,7 +5,6 @@
             @click="lookForLetter">
             {{item}}
         </div>
-        {{this.$store.getters.ask}}
     </div>
 </template>
 
@@ -25,7 +24,10 @@ export default {
     },
     methods: {
         lookForLetter: function(event){
+            if( event.target.classList.contains('main__keyboard__letter--inactive') ) return;
+            if( this.$store.state.tries < 0 ) return;
             var letterFound = false;
+            event.target.classList.toggle('main__keyboard__letter--inactive')
             for(let item of this.$store.state.word){
                 if( item.value == event.target.innerText ){
                     this.$store.commit('goodLetter', item.id)

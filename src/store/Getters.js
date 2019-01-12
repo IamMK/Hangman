@@ -13,7 +13,6 @@ export default {
         for(let item of state.word){
             if(!item.visible && item.value != " "){
                 allVisible = false;
-                console.log(allVisible)
                 break;
             }
             else allVisible = true;

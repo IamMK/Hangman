@@ -1,11 +1,15 @@
 .main{
     &__word{
-        display: flex;
+        @include flex;
         &__letter{
             @include flex;
             @include letter;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid white;
             cursor: pointer;
+            color: rgba(255,255,255,1);
+            // background: #1a1a1a;
+            text-shadow: 0 0 15px rgba(255,255,255,.7), 0 0 10px rgba(255,255,255,.7);
+            font-size: 2em;
 
             &--no-decoration{
                 @include letter;
@@ -15,14 +19,29 @@
     }
 
     &__keyboard{
-        display: flex;
+        @include flex;
 
         &__letter{
             @include flex;
-            width: 25px;
-            height:25px;
-            border: 1px solid black;
+            width: 50px;
+            height:50px;
+            // border: 10px solid rgba(255,255,255,0.5);
             cursor: pointer;
+            color: white;
+            transition: 0.3s;
+            &:hover{
+                font-size: 2em;
+            }
+            &--inactive{
+                color: transparent;
+            }
         }
+    }
+
+    &__state{
+        @include flex;
+        color: white;
+        text-shadow: 0 0 15px rgba(255,255,255,.7), 0 0 10px rgba(255,255,255,.7);
+        font-size: 4em;
     }
 }
