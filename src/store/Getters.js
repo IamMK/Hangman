@@ -1,16 +1,16 @@
 export default {
-    ask: state => {
-        var temp = [];
+    wordArea: state => {
+        let wordAreaModifier = []
         for(let item of state.word){
-        if(item.value == " ") temp.push('nbsp');
-        else if(item.visible) temp.push(item.value);
-        else temp.push('');
+            if(item.value == " ") wordAreaModifier.push('nbsp')
+            else if(item.visible) wordAreaModifier.push(item.value)
+            else wordAreaModifier.push('')
         }
-        return temp;
+        return wordAreaModifier;
     },
     checkIfWin: state => {
-        let array = state.word.filter( ev => (ev.visible || ev.value == ' ') )
-        if( array.length === state.word.length ) return "Today you did not day. See you later, bro."
-        if ( state.tries < 0 ) return "Yea! Die, die die!!!"
+        const allLettersVisible = state.word.every( element => (element.visible || element.value == ' ') )
+        if( allLettersVisible ) state.statusText = "Today you did not day. See you later, bro."
+        else state.statusText = "Scared? Not yet? Give me a moment."
     }
 }

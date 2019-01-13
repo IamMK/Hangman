@@ -1,6 +1,6 @@
 <template>
     <div class="main__state">
-        <p>{{stateInfo}}</p>
+        <p>{{status}}</p>
     </div>
 </template>
 
@@ -8,8 +8,8 @@
 export default {
     name: 'state',
     computed:{
-    stateInfo(){
-      return this.$store.getters.checkIfWin
+    status(){
+      return this.$store.state.statusText
     }
   }
 }

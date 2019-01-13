@@ -1,6 +1,6 @@
 <template>
     <div class="main__word">
-        <template v-for="item in ask">
+        <template v-for="item in wordArea">
             <div class="main__word__letter"
             :key="item.id"
             v-if="isSpacebarItem(item)">
@@ -17,8 +17,8 @@
 export default {
     name: "Word",
     computed: {
-        ask(){
-            return this.$store.getters.ask
+        wordArea(){
+            return this.$store.getters.wordArea
             }
     },
     methods: {
