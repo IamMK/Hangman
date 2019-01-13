@@ -1,5 +1,8 @@
 export const goodLetter = (state, id) => {
-        state.word[id].visible = true
+        for(let item of id){
+            console.log(item.id)
+            state.word[item.id].visible = true
+        }
         state.statusText = "Good. But luck is not eternal"
 }
 

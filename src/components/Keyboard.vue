@@ -14,7 +14,7 @@ export default {
     computed:{
         ascii: {
             get: function(){
-                var char = []
+                let char = []
                 for(let i = 0; i <= 25; i++){
                     char[i] = String.fromCharCode(i+65)
                 }
@@ -26,15 +26,11 @@ export default {
         lookForLetter: function(event){
             if( event.target.classList.contains('main__keyboard__letter--inactive') ) return
             if( this.$store.state.tries < 0 ) return
-            var letterFound = false
+            let letterFound = false
             event.target.classList.toggle('main__keyboard__letter--inactive')
-            for(let item of this.$store.state.word){
-                if( item.value == event.target.innerText ){
-                    this.$store.commit('goodLetter', item.id)
-                    letterFound = true
-                }
-            }
-            if(!letterFound) this.$store.commit('badTry')
+            let shootedIdentifiers = this.$store.state.word.filter( word => word.value == event.target.innerText )
+            if( shootedIdentifiers.length > 0 ) this.$store.commit('goodLetter', shootedIdentifiers)
+            else this.$store.commit('badTry')
         }
     }
 }
