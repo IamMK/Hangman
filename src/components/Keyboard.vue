@@ -34,7 +34,7 @@ export default {
                     letterFound = true;
                 }
             }
-            if(!letterFound)    this.$store.commit('badTry')
+            if(!letterFound) this.$store.commit('badTry')
         }
     }
 }

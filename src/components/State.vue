@@ -9,7 +9,7 @@ export default {
     name: 'state',
     computed:{
     stateInfo(){
-      return this.$store.getters.checkIfLose
+      return this.$store.getters.checkIfWin
     }
   }
 }

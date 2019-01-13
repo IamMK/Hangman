@@ -8,18 +8,9 @@ export default {
         }
         return temp;
     },
-    checkIfLose: state => {
-        var allVisible = false;
-        for(let item of state.word){
-            if(!item.visible && item.value != " "){
-                allVisible = false;
-                break;
-            }
-            else allVisible = true;
-        }
-        if(allVisible) return "You have win it!!!"
-        else if(state.tries < 0){
-            return "Wasted!!!"
-        }
+    checkIfWin: state => {
+        let array = state.word.filter( ev => (ev.visible || ev.value == ' ') )
+        if( array.length === state.word.length ) return "Today you did not day. See you later, bro."
+        if ( state.tries < 0 ) return "Yea! Die, die die!!!"
     }
 }
