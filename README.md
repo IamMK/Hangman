@@ -14,7 +14,7 @@ npm run dev
 # build for production with minification
 npm run build
 
-# using scss transpiler
+# build css files
 npm run scss
 ```
 
