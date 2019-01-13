@@ -25,12 +25,10 @@ export default {
     methods: {
         lookForLetter: function(event){
             if( event.target.classList.contains('main__keyboard__letter--inactive') ) return
-            if( this.$store.state.tries < 0 ) return
-            let letterFound = false
+            if( this.$store.state.gameOver ) return
             event.target.classList.toggle('main__keyboard__letter--inactive')
             let shootedIdentifiers = this.$store.state.word.filter( word => word.value == event.target.innerText )
-            if( shootedIdentifiers.length > 0 ) this.$store.commit('goodLetter', shootedIdentifiers)
-            else this.$store.commit('badTry')
+            shootedIdentifiers.length > 0 ? this.$store.commit('goodLetter', shootedIdentifiers) : this.$store.commit('badTry')
         }
     }
 }

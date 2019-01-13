@@ -38,5 +38,5 @@ export default {
         {id: 35, value: 'U', visible: false},
     ],
     tries: 5,
-    statusText: "Scared? Not yet? Give me a moment."
+    gameOver: false
 }
