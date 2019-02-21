@@ -1,6 +1,6 @@
 export default {
     wordArea: state => {
-        let wordAreaModifier = []
+        const wordAreaModifier = []
         for(let item of state.word){
             if(item.value == " ") wordAreaModifier.push('nbsp')
             else if(item.visible) wordAreaModifier.push(item.value)
@@ -12,7 +12,7 @@ export default {
         const allLettersVisible = state.word.every( element => (element.visible || element.value == ' ') )
         if( allLettersVisible ) {
             state.gameOver = true
-            return "Today you did not day. See you later, bro."
+            return "Today you did not die. See you later, bro."
         }
 
         switch(state.tries){

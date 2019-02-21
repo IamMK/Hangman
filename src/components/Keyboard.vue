@@ -14,7 +14,7 @@ export default {
     computed:{
         ascii: {
             get: function(){
-                let char = []
+                const char = []
                 for(let i = 0; i <= 25; i++){
                     char[i] = String.fromCharCode(i+65)
                 }
